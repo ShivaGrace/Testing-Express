@@ -12,43 +12,8 @@
     </head>
     
     <body>
-        <header class="header">
 
-            <div class="header-top">
-                <div class="top-left">
-                    <div class="logo">
-                        <a href="/"><h3>CLESSIDRA</h3></a>
-                    </div>
-
-                    <div class="searchbox">
-                        <i class="fa fa-search"></i>  
-                        <input type="text" placeholder="Buscar prendas" />
-                    </div>
-                </div>
-                <nav class="top-right">
-                    <ul class="nav-links">
-                        <li><a href="/registro">Registro<i class="fas fa-user-circle"></i></a></li>
-                        <li><a href="/login">Log in<i class="fas fa-sign-in-alt"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="header-bottom">
-                <nav class="site-nav">
-                    <ul class="nav-links">
-                        <li><a href="#">Mujer</a></li>
-                        <li><a href="#">Hombre</a></li>
-                        <li><a href="#">Vendedores</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="/carrito">Carrito</a></li>
-                    </ul>
-                    <div class="burger-menu">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </nav>
-            </div>
-
-        </header>
+        <%- include('./partials/header') %>
 
         <main class="main">
             <h3 class="title">Bienvenid@ a Clessidra !</h3>
@@ -92,26 +57,7 @@
             </div>
         </main>
 
-        <footer>
-            <div class="main-footer">
-              <section class="fter">
-                <i class="fab fa-whatsapp"></i>
-                <h2>DUDAS?</h2>
-                <article>Consultanos cualquier duda antes de comprar via Whatsapp</article>
-              </section>
-              <section class="fter">
-                <i class="fas fa-shipping-fast"></i>
-                <h2>ENVIOS Y RETIROS</h2>
-                <article>Chequeá todas las opciones en tu carrito de compra antes de pagar.</article>
-              </section>
-              <section class="fter">
-                <i class="fas fa-user-shield"></i>
-                <h2>100% SEGURO</h2>
-                <article>¿No te gusta? ¡Devolvelo gratuitamente! En Clessidra estás siempre protegid@.</article>
-              </section>
-            </div>
-            <div class="bottom-footer">Copyright © 2022 Clessidra S.R.L.</div>
-        </footer>
+        <%- include('./partials/footer') %>
 
     </body>
 </html>
