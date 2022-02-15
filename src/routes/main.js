@@ -18,9 +18,5 @@ router.get("/", (req, res) => {
   router.get("/carrito", (req, res) => {
     res.sendFile(path.join(__dirname, "../views/carrito.html"));
   });
-  router.get("/login2", (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/loginNEW.html"));
-  });
-
 
 module.exports = router;
