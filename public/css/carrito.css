@@ -1,5 +1,7 @@
 /*Config generales*/
 *{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     background-color: (255, 255, 255);
@@ -141,7 +143,7 @@ ul li a i {
 }
 /* Contenido general */
 main{
-    margin-top:50px;
+    margin: 50px 0;
 }
 a{
     color: black;
