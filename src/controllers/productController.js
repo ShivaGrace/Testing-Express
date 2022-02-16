@@ -24,7 +24,8 @@ let productController = {
     res.render('productCreate');
   },
   delete: function () {},
-  edit: function () {},
+  edit: (req, res) => {
+    res.render('productEdit')}
 };
 
 module.exports = productController;
