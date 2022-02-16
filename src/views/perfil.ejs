@@ -21,20 +21,19 @@
 
   <!-- Internal CSS -->
   <link href="css/loginstyles.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/index.css">
 
 </head>
 
-<%- include('./partials/header') %>
+
 
 <div class="container-sm">
   <body class="text-center">
-    <header>
-      <h3 class="logo">CLESSIDRA</h3>
-    </header>
+    <%- include('./partials/header') %>
     <main class="form-signin">
       <form>
         <h1 class="h3 mb-3 fw-normal">Bienvenido/a! Por favor registrate con tus datos:</h1>
-            
+\
         <div class="form-floating">
           <input type="text" class="form-control" id="nombre" placeholder="Juan">
           <label for="nombre">Nombre</label>
