@@ -20,7 +20,9 @@ let productController = {
       );
     }
   },
-  add: function () {},
+  add: (req, res) => {
+    res.render('productCreate');
+  },
   delete: function () {},
   edit: function () {},
 };

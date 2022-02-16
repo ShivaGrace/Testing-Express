@@ -1,7 +1,7 @@
 {
   "name": "testingtabnine",
   "version": "1.0.0",
-  "description": "",
+  "description": "Repositorio de prueba Este codigo no es útil, simplemente son pruebas de desarrollo",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +14,13 @@
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ezerom77/Testing-Express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ezerom77/Testing-Express/issues"
+  },
+  "homepage": "https://github.com/Ezerom77/Testing-Express#readme"
 }
