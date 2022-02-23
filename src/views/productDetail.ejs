@@ -1,46 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalle de producto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <link rel="stylesheet" href="./css/product.css" />
+    <%- include('./partials/head') %>
   </head>
   <body>
     <%- include('./partials/header') %>
-    <main>
-      <div class="container">
-        <div class="card">
-          <div class="form">
+    <main class="detail-main">
+      <div class="detail-container">
+        <div class="detail-card">
+          <div class="detail-form">
             <div class="left-side">
               <!-- breadcrums -->
               <div class="woman">
-                <h5>Woman</h5>
+                <h5>Mujeres</h5>
                 <i class="fa fa-angle-right"></i>
-                <p>Pastel Jacket with Bejewelled Collar</p>
+                <p>Campera de cuero con Collar</p>
               </div>
               <div class="images">
                 <div class="img_girl_left">
@@ -59,22 +33,16 @@
               <div class="indexing">
                 <span><i class="fa fa-angle-left"></i> Prev</span>
                 <small>2 of 10</small>
-                <span>Next <i class="fa fa-angle-right"></i></span>
+                <span>Sig <i class="fa fa-angle-right"></i></span>
               </div>
-              <h3>Pastel Jacket With Bejewelled Collar</h3>
+              <h3>Campera de cuero con Collar</h3>
               <h4>AR$ 799</h4>
               <div class="designer">
-                <h5>Vendedor:</h5>
-                <p>Mademoiselle Tambour</p>
+                <h5>Vendedor: Mademoiselle Tambour</h5>
               </div>
-              <div>
-                <p>melle</p>
-                <h3>TAMBOUR</h3>
-                <h5>Mademoiselle Tambour</h5>
-              </div>
+              
               <div class="designer">
-                <h5>Color :</h5>
-                <p>Tobacco Brown</p>
+                <h5>Color: Tobacco Brown</h5>
               </div>
               <div class="color">
                 <span></span>
@@ -95,13 +63,12 @@
                   <i class="fa fa-plus"></i>
                 </div>
                 <button>Agregar al carrito</button>
-                <a href="/product/4/create"><button id="edit">Editar Producto</button></a>
+                <a href="/productos/4/create"><button id="edit">Editar Producto</button></a>
               </div>
               <div class="open_wish">
-                <p>Open sizes guide</p>
+                <a href="#">Abrir guía de talles</a>
                 <div class="wishlist">
-                  <i class="fa fa-heart-o"></i>
-                  <p>Add to Wishlist</p>
+                  <a href="#"><i class=" far fa-heart"></i> Agregar a preferidos</a>
                 </div>
               </div>
               <div class="description">
@@ -122,10 +89,10 @@
               <div class="share">
                 <h4>Compartir</h4>
                 <div class="social">
-                  <i class="fa fa-facebook"></i>
-                  <i class="fa fa-twitter"></i>
-                  <i class="fa fa-pinterest"></i>
-                  <i class="fa fa-google-plus"></i>
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-google-plus-g"></i>
                 </div>
               </div>
             </div>

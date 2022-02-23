@@ -1,32 +1,18 @@
 {
-  "name": "testingtabnine",
-  "version": "1.0.0",
-  "description": "Repositorio de prueba Este codigo no es útil, simplemente son pruebas de desarrollo",
-  "main": "app.js",
+  "name": "clessidraapp",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/bin/www"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "nodemon": "^2.0.15",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "method-override": "^3.0.0",
     "morgan": "~1.9.1",
-    "multer": "^1.4.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ezerom77/Testing-Express.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Ezerom77/Testing-Express/issues"
-  },
-  "homepage": "https://github.com/Ezerom77/Testing-Express#readme"
+    "method-override": "^3.0.0",
+    "nodemon": "^2.0.15"
+  }
 }
