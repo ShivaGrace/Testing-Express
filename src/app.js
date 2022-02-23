@@ -1,22 +1,54 @@
-//requiriendo componentes
-const express = require("express");
-const path = require("path");
+
+// ************ Require's ************
+const createError = require('http-errors');
+const cookieParser = require('cookie-parser');
+const express = require('express');
+const logger = require('morgan');
+const path = require('path');
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+
+// ************ express() - (don't touch) ************
 const app = express();
 
-const productRoutes = require("./routes/product.js");
-const mainRoutes = require("./routes/main.js");
+// ************ Middlewares - (don't touch) ************
+app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
+app.use(express.urlencoded({ extended: false }));
+app.use(logger('dev'));
+app.use(express.json());
+app.use(cookieParser());
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
+
+// ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,'./views'))
+app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
 
-// activacion del sever en port 3050 y configurando opciones de Heroku
-app.listen(process.env.PORT || 3050, () =>
-  console.log("servidor corriendo en puerto 3050")
-);
 
-app.use("/product",productRoutes);
-app.use('/',mainRoutes);
+// ************ WRITE YOUR CODE FROM HERE ************
+// ************ Route System require and use() ************
+const mainRoutes = require('./routes/main'); // Rutas main
+const productRoutes = require('./routes/product'); // Rutas /products
 
-// exponiendo la carpeta public
-app.use(express.static(path.join(__dirname, "../public")));
+app.use('/', mainRoutes);
+app.use('/products', productRoutes);
 
+
+
+// ************ DON'T TOUCH FROM HERE ************
+// ************ catch 404 and forward to error handler ************
+app.use((req, res, next) => next(createError(404)));
+
+// ************ error handler ************
+app.use((err, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.path = req.path;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+// ************ exports app - dont'touch ************
+module.exports = app;
