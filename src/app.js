@@ -10,7 +10,9 @@ var app = express();
 app.set('views', path.join(__dirname, '../src/views'));
 app.set('view engine', 'ejs');
 
-
+// method override para PUT y DELETE
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 app.use(logger('dev'));
 app.use(express.json());
