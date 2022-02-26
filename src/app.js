@@ -25,8 +25,8 @@ const mainRoutes = require("./routes/main");
 const usersRouter = require('./routes/users');
 
 // Rutas //
-app.use('/usuarios', usersRouter);
-app.use("/productos",productRoutes);
+app.use('/users', usersRouter);
+app.use("/products",productRoutes);
 app.use('/',mainRoutes);
 
 

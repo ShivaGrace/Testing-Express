@@ -21,11 +21,16 @@ const upload = multer ({storage: storage});
 
 
 
-//detalle de producto
+//Rutas de producto
 router.get("/", productController.list);
 router.get("/create", productController.add);
-router.post("/create", upload.single ('productImage'), productController.edit);
+router.get("/:id", productController.detail);
+router.get("/:id/edit", productController.edit);
+//router.post('/', productController.???)
+//router.put("/:id", productController.???);
+//router.delete("/:id", productController.???);
 
+router.post("/create", upload.single ('productImage'), productController.edit);
 router.get('/carrito', productController.carrito);
 
 

@@ -2,6 +2,9 @@ const path = require("path")
 
 const productController = {
   list: (req, res) => {
+    res.render('productList', {title: 'Listado de producto'});
+  },
+  detail: (req, res) => {
     res.render('productDetail', {title: 'Detalle de producto'});
   },
   add: (req, res) => {
