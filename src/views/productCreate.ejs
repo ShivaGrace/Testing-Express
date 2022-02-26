@@ -20,37 +20,43 @@
       <div class="form-group">
         <label for="Categorias">Categorías de productos</label>
         <select multiple class="form-control" id="categorias">
-          <option>Mujeres</option>
-          <option>Hombres</option>
-          <option>Niños</option>
-          <option>Invierno</option>
-          <option>Verano</option>
+          <option value="mujeres">Mujeres</option>
+          <option value="hombres">Hombres</option>
+          <option value="ninos">Niños</option>
+          <option value="invierno">Invierno</option>
+          <option value="verano">Verano</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="Categorias">Talles disponibles</label>
-        <select multiple class="form-control" id="categorias">
-          <option>XS</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-          <option>XXL</option>
+        <label for="Categorias">Seleccionar Talle</label>
+        <select class="form-select" id="talle">
+          <option selected>Seleccionar talle</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
         </select>
       </div>
       <div class="form-group">
         <label for="Categorias">Colores disponibles</label>
-        <select multiple class="form-control" id="categorias">
-          <option>Negro</option>
-          <option>Blanco</option>
-          <option>Azul</option>
-          <option>Verde</option>
-          <option>Marron</option>
+        <select class="form-select" id="color">
+          <option selected>Seleccionar color</option>
+          <option value="negro">Negro</option>
+          <option value="blanco">Blanco</option>
+          <option value="azul">Azul</option>
+          <option value="verde">Verde</option>
+          <option value="marron">Marron</option>
         </select>
       </div>
       <div class="form-group">
+        <label for="productStock">Stock disponible (unidades)</label>
+        <input type="number" class="form-control" id="productStock" >
+      </div>
+      <div class="form-group">
         <label for="productName">Precio de venta $</label>
-        <input type="text" class="form-control" id="productPrice" >
+        <input type="number" class="form-control" id="productPrice" >
       </div>
       <div class="form-group">
         <label for="productImage">Imagen del producto</label>
