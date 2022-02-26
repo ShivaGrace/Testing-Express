@@ -1,5 +1,9 @@
-const path = require("path")
+// Requires
+const path = require("path");
 
+
+
+// Controllers
 const productController = {
   list: (req, res) => {
     res.render('productList', {title: 'Listado de producto'});
@@ -19,4 +23,6 @@ const productController = {
   }
 }
 
+
+// Module export
 module.exports = productController;

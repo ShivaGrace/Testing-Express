@@ -3,7 +3,7 @@ const path = require("path");
 
 
 
-// Controladores
+// Controllers
 let userController = {
   usuarios: (req, res) => {
     res.send('pagina de usuarios TBD');
@@ -20,5 +20,5 @@ let userController = {
 }
 
 
-// Exportar modulo
+// Module export
 module.exports = userController;
