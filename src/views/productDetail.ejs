@@ -14,19 +14,19 @@
               <div class="woman">
                 <h5>Mujeres</h5>
                 <i class="fa fa-angle-right"></i>
-                <p>Campera de cuero con Collar</p>
+                <p><%=productDetail.name%></p>
               </div>
               <div class="images">
                 <div class="img_girl_left">
                   <i class="fa fa-angle-up"></i>
                   <!-- Imagenes secundarias -->
-                  <span><img src="https://i.imgur.com/Rq0nf6K.jpg.jpg" /></span>
-                  <span><img src="https://i.imgur.com/Rq0nf6K.jpg.jpg" /></span>
-                  <span><img src="https://i.imgur.com/Rq0nf6K.jpg.jpg" /></span>
+                  <span><img src="/images/products/<%=productDetail.image%>" /></span>
+                  <span><img src="/images/products/<%=productDetail.image%>" /></span>
+                  <span><img src="/images/products/<%=productDetail.image%>" /></span>
                   <i class="fa fa-angle-down"></i>
                 </div>
                 <!-- Imagen principal -->
-                <span><img src="https://i.imgur.com/Rq0nf6K.jpg.jpg" /></span>
+                <span><img src="/images/products/<%=productDetail.image%>" /></span>
               </div>
             </div>
             <div class="right-side">
@@ -35,14 +35,14 @@
                 <small>2 of 10</small>
                 <span>Sig <i class="fa fa-angle-right"></i></span>
               </div>
-              <h3>Campera de cuero con Collar</h3>
-              <h4>AR$ 799</h4>
+              <h3><%=productDetail.name%></h3>
+              <h4>AR$ <%=productDetail.price%></h4>
               <div class="designer">
                 <h5>Vendedor: Mademoiselle Tambour</h5>
               </div>
               
               <div class="designer">
-                <h5>Color: Tobacco Brown</h5>
+                <h5>Color: <%=productDetail.color%></h5>
               </div>
               <div class="color">
                 <span></span>
