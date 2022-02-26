@@ -12,7 +12,13 @@ const productController = {
     res.render('productList', {title: 'Todos los productos', products: products});
   },
   detail: (req, res) => {
-    res.render('productDetail', {title: 'Detalle de producto'});
+		let productoSeleccionado = null;
+		for (i=0;i<products.length;i++) {
+			if(req.params.id == products[i].id) {
+				productoSeleccionado = products[i];
+			}
+		}
+		res.render('productDetail', {title: 'Detalle de producto', productDetail: productoSeleccionado});
   },
   add: (req, res) => {
     res.render('productCreate', {title: 'Crear Producto Nuevo'});
