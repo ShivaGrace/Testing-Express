@@ -216,7 +216,7 @@ p.howto {
 ul.product-detail {
   position: absolute;
   font-size: 15px;
-  text-shadow: 0px 0px 5px #ffffff;
+  text-shadow: 0px 0px 5px black;
   padding: 5px;
   color: #ffffff;
   bottom: 0;
