@@ -8,8 +8,8 @@
   <%- include('./partials/header') %>
   <main class="form-signin">
     <h1 class="form-title h3 mb-3 fw-normal">Bienvenido/a!<br>Por favor ingresar datos de producto:</h1> 
-    <div>  
-      <form method="post" action="/products/create" enctype="multipart/form-data">      <div class="form-group">
+    <form method="post" action="/products/" enctype="multipart/form-data">      
+      <div class="form-group">
         <label for="productName">Nombre de producto</label>
         <input type="text" class="form-control" id="productName" >
       </div>
@@ -65,7 +65,6 @@
       <br>
       <button class="btn-enviar w-100 " type="submit">Enviar</button>
     </form>
-  </div>
   </main> 
 
 <%- include('./partials/footer') %>
