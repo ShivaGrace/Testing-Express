@@ -11,6 +11,9 @@ const productController = {
     res.send('product TBD')},
   delete: (req, res) => {
     res.send('product delete TBD')},
+  carrito: (req, res) => {
+    res.render('carrito', { title: 'Carrito de compras' })
+  }
 }
 
 module.exports = productController;

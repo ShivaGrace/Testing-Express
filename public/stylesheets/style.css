@@ -382,15 +382,6 @@ a.logo{
   z-index: 2;
 }
 
-
-.form-signin input[type="text"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-
-
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
@@ -403,6 +394,15 @@ a.logo{
   border-top-right-radius: 0;
 }
 
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 5;
+  border-top-right-radius: 5;
+  border: 1px solid #ccc;
+
+}
+
+
 
 .form-group {
   margin-bottom: 1.25em
@@ -412,7 +412,7 @@ a.logo{
   display: inline-block;
   height: 43px;
   width: 100%;
-  border: none;
+  border: 1px;
   border-radius: 0;
   font-size: 16px;
   font-weight: 400;
@@ -421,6 +421,10 @@ a.logo{
   -webkit-box-shadow: none;
   box-shadow: none;
   border-bottom: 1px solid #ccc
+}
+
+.form-control-file {
+  margin-top: 5px;
 }
 
 .btn-primary {
