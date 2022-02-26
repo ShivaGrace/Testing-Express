@@ -8,7 +8,7 @@ const productController = {
     res.render('productCreate', {title: 'Crear Producto Nuevo'});
   },
   edit: (req, res) => {
-    res.send('product TBD')},
+    res.send('producto creado TBD')},
   delete: (req, res) => {
     res.send('product delete TBD')},
   carrito: (req, res) => {

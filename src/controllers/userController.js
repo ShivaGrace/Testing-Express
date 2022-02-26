@@ -1,5 +1,9 @@
-const path = require("path")
+// Requires
+const path = require("path");
 
+
+
+// Controladores
 let userController = {
   usuarios: (req, res) => {
     res.send('pagina de usuarios TBD');
@@ -14,5 +18,7 @@ let userController = {
     res.render('registro', { title: 'Registro' })
   }
 }
-    
+
+
+// Exportar modulo
 module.exports = userController;
