@@ -16,6 +16,9 @@ let userController = {
   },
   registro: (req, res) => {
     res.render('registro', { title: 'Registro' })
+  },
+  carrito: (req, res) => {
+    res.render('carrito', { title: 'Carrito de compras' });
   }
 }
 

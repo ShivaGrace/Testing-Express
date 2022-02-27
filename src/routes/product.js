@@ -38,9 +38,6 @@ router.get("/edit/:id", productController.edit);
 //Delete an existing product
 //router.delete("/delete/:id", productController.???);
 
-//Access carrito (CREO QUE HAY QUE MOVERLO A USERS)
-router.get('/carrito', productController.carrito);
-
 
 
 

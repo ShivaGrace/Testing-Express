@@ -10,7 +10,7 @@ const multer = require ('multer');
 router.get('/', userController.usuarios);
 router.get('/login',userController.login);
 router.get('/registro',userController.registro);
-
+router.get('/carrito', userController.carrito);
 
 
 module.exports = router;
