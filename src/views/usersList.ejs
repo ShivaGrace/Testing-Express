@@ -7,17 +7,20 @@
     <%- include('./partials/header') %>
         <main>
             <h3><%= title %></h3>
-            <br>
+            <div class="userList">
             <% for(i=0;i<users.length;i++) { %>
-                                    <P>User ID: <%=users[i].id%></P>
+                <div class="user">
+                                    <P class="id">ID: <%=users[i].id%></P>
                                     <P>Nombre: <%=users[i].first_name%></P>
                                     <P>Apellidos: <%=users[i].last_name%></P>
                                     <P>email: <%=users[i].email%></P>
                                     <P>Contraseña: <%=users[i].password%></P>
                                     <P>Categoria: <%=users[i].category%></P>
                                     <P>Avatar: <%=users[i].image%></P>
-                                    <hr>
-                                               <% } %>Ï
+                                </div>
+
+                                               <% } %>
+                                            </div>
         </main>
         <%- include('./partials/footer') %> 
 

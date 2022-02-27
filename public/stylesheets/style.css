@@ -1158,11 +1158,26 @@ input[type="text"] {
 }
 .resumenDeCompra div{
   margin: 15px;
-  
 
 }
 
 
+/*///////////////////////////////   UserList   ///////////////////////////////*/
+div.userList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  }
+div.user {
+  width: 20%;
+  border: solid 2px black;
+  padding: 5px;
+  margin: 20px;
+}
+p.id {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
 
 
