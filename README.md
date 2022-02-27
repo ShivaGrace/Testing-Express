@@ -1,3 +1,2 @@
-# Testing-Express
+# Clon de Clessidra
 Repositorio de prueba
-Este codigo no es útil, simplemente son pruebas de desarrollo

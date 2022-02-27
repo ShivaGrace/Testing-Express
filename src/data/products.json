@@ -2,11 +2,11 @@
  {
   "id": 1,
   "name": "Campera de cuero con Collar",
-  "price": 10000,
-  "color": "Tobacco Brown",
+  "price": "7500",
+  "color": "negro",
   "talle": "M",
-  "stock": 5,
-  "description": "Descripcion Campera de cuero con Collar",
+  "stock": "2",
+  "description": "Campera de cuero con Collar",
   "image": "Campera.jpg"
  },
  {

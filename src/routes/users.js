@@ -2,7 +2,7 @@
 var express = require('express');
 const userController = require('../controllers/userController');
 var router = express.Router();
-const multer = require ('multer');
+// const multer = require ('multer');
 
 
 
