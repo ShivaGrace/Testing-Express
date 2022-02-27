@@ -21,17 +21,26 @@ const upload = multer ({storage: storage});
 
 
 
-//Rutas de producto
+// Get all products
 router.get("/", productController.list);
+
+// Create a new product
 router.get("/create", productController.add);
+router.post("/create", upload.single ('productImage'), productController.store);
+
+// Get one product
 router.get("/detail/:id", productController.detail);
-router.get("/detail/:id/edit", productController.edit);
-//router.post('/', productController.???)
-//router.put("/:id", productController.???);
-//router.delete("/:id", productController.???);
+
+// Edit an existing product
+router.get("/edit/:id", productController.edit);
+//router.put('/edit/:id', productController.update)
+
+//Delete an existing product
+//router.delete("/delete/:id", productController.???);
+
+//Access carrito (CREO QUE HAY QUE MOVERLO A USERS)
 router.get('/carrito', productController.carrito);
 
-router.post("/create", upload.single ('productImage'), productController.store);
 
 
 

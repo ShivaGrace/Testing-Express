@@ -25,10 +25,21 @@ const productController = {
 	 	res.render('productDetail', {title: 'Detalle de producto', productDetail: productoSeleccionado});
   },
   store: (req, res) =>{
-    res.send('Llegue al controlador')
+    res.send('Llegue al controlador de store via PUT')
   },
   edit: (req, res) => {
-    res.render('productEdit', {title: 'Editar Producto Nuevo'});
+      let id = req.params.id;
+      let productoEncontrado = null;
+      for (let s of products){
+        if (id==s.id){
+          productoEncontrado=s;
+        }
+      };
+      res.render('productEdit',{title: 'Editar Producto', ProductoaEditar: productoEncontrado});
+    },
+
+  update: (req, res) =>{
+    res.send('Llegue al controlador de update via PUT')
   },
   delete: (req, res) => {
     res.send('product delete TBD');
