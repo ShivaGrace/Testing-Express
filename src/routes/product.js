@@ -38,15 +38,6 @@ router.put('/edit/:id', productController.update);
 //Delete an existing product
 router.delete("/edit/:id", productController.delete);
 
-//Access carrito (CREO QUE HAY QUE MOVERLO A USERS)
 
-
-
-
-//definiendo la ruta generica de productos, mostrando  el ID pasado
-//router.get("/comentarios/:id", productController.comments);
-//mostrando comentarios del producto y destalle si aplica.
-//router.get("/comentarios/:id/:idComentario?",productController.commentsDetails );
-//mostrando la vista de creacion y edicion de productos
 
 module.exports = router;
