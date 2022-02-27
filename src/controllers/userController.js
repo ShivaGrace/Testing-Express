@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// const usersFilePath = path.join(__dirname, '../data/users.json');
+const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
@@ -10,8 +10,8 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 // Controladores
 let userController = {
   usuarios: (req, res) => {
-    res.send('pagina de usuarios TBD');
-  },
+    res.render('usersList', {title: 'Todos los usuarios', users: users});
+    },
   perfil: (req, res) => {
     res.render('perfil', { title: 'Editar Perfil' })
   },
