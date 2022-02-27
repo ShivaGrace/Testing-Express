@@ -1,3 +1,4 @@
+// Requires
 const fs = require('fs');
 const path = require('path');
 
@@ -32,11 +33,11 @@ const productController = {
 			id:   idNuevo,
 			name: req.body.productName ,
 			description: req.body.productDescription,
-			//category: req.body.category,
+			categories: req.body.categorias,
 			price: req.body.productPrice,
-      color: req.body.color,
-      talle: req.body.talle,
-      stock: req.body.productStock,
+      		color: req.body.color,
+      		talle: req.body.talle,
+      		stock: req.body.productStock,
 			image: nombreImagen
 		};
 
@@ -46,7 +47,6 @@ const productController = {
 
 		res.redirect('/');
 
-		
 	},
   detail: (req, res) => {
     let productoSeleccionado = null;
@@ -67,17 +67,52 @@ const productController = {
       };
       res.render('productEdit',{title: 'Editar Producto', ProductoaEditar: productoEncontrado});
     },
-
   update: (req, res) =>{
-    res.send('Llegue al controlador de update via PUT')
-  },
+    let id = req.params.id;
+
+		for (let s of products){
+			if (id==s.id){
+			s.name = req.body.productName;
+			s.description = req.body.productDescription;
+			s.categories = req.body.categorias;
+			s.price = req.body.productPrice;
+      		s.color = req.body.color;
+      		s.talle = req.body.talle;
+      		s.stock = req.body.productStock;
+			//s.image = req.file.filename;
+      // no se si se puede actualizar la imagen asi porque deberia uploadear via multer!
+      break;
+			}
+		};
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+
+		res.redirect('/');
+  //res.send('Llegue al controlador de update via PUT')
+
+	},
   delete: (req, res) => {
-    res.send('product delete TBD');
-  },
-  carrito: (req, res) => {
-    res.render('carrito', { title: 'Carrito de compras' });
-  }
-}
+    let id = req.params.id;
+		let ProductoEncontrado=null;
+
+		let Nproducts = products.filter(function(e){
+			return id!=e.id;
+		})
+
+		for (let producto of products){
+			if (producto.id == id){
+			    ProductoEncontrado=producto;
+			}
+		}
+
+		fs.unlinkSync(path.join(__dirname, '../../public/images/products/', ProductoEncontrado.image));
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(Nproducts,null,' '));
+
+		res.redirect('/');
+	}
+  
+};
 
 
 // Module export

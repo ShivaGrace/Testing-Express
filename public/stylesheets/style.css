@@ -483,6 +483,22 @@ a.logo{
 
 }
 
+.btn-borrar{
+  width: 50px;
+  height: 40px;
+  border: 1px solid #ee964b;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0s;
+  background-color: orangered;
+  margin-top: 10px;
+}
+.btn-borrar:hover{
+  background-color: #000000;
+
+}
+
 .or-container {
   align-items: center;
   color: #ccc;

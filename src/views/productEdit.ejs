@@ -8,7 +8,7 @@
   <%- include('./partials/header') %>
   <main class="form-signin">
     <h1 class="form-title h3 mb-3 fw-normal">Estás editando:<br><i><%=ProductoaEditar.name %></i></h1>
-    <form method="post" action="/products/edit/<%= ProductoaEditar.id %>?_method=PUT" enctype="multipart/form-data">      
+    <form method="post" action="/products/edit/<%=ProductoaEditar.id%>?_method=PUT" >      
       <div class="form-group">
         <label for="productName">Nombre de producto</label>
         <input value="<%=ProductoaEditar.name %>" type="text" class="form-control" id="productName" name="productName" >
@@ -28,7 +28,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="Categorias">Seleccionar Talle</label>
+        <label for="talle">Seleccionar Talle</label>
         <select class="form-select" id="talle" name="talle">
           <option selected>Seleccionar talle</option>
           <option value="XS">XS</option>
@@ -40,7 +40,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="Categorias">Colores disponibles</label>
+        <label for="color">Colores disponibles</label>
         <select class="form-select" id="color" name="color">
           <option selected>Seleccionar color</option>
           <option value="negro">Negro</option>
@@ -55,7 +55,7 @@
         <input type="number" class="form-control" id="productStock" name="productStock">
       </div>
       <div class="form-group">
-        <label for="productName">Precio de venta $</label>
+        <label for="productPrice">Precio de venta $</label>
         <input type="number" class="form-control" id="productPrice" name="productPrice" >
       </div>
       <div class="form-group">
@@ -64,6 +64,9 @@
       </div>
       <br>
       <button class="btn-enviar w-100 " type="submit">Actualizar</button>
+    </form>
+    <form method="post" action="/products/edit/<%=ProductoaEditar.id%>?_method=DELETE" >      
+    <button class="btn-borrar w-100 " type="submit">Eliminar</button>
     </form>
   </main> 
 

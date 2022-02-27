@@ -58,15 +58,5 @@
   "stock": 9,
   "description": "Descripcion Camisa Lisa Elastizada.",
   "image": "Camisa.jpg"
- },
- {
-  "id": 7,
-  "name": "prueba",
-  "description": "descripcion",
-  "price": "232323",
-  "color": "blanco",
-  "talle": "L",
-  "stock": "234",
-  "image": "1645924597290logo-mercado-liebre.svg"
  }
 ]
