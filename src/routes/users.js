@@ -12,7 +12,6 @@ router.get('/login',userController.login);
 router.post('/login', userController.logged);
 router.get('/registro',userController.registro);
 router.post('/registro',userController.registered);
-
 router.get('/carrito', userController.carrito);
 
 
