@@ -15,6 +15,39 @@ const productController = {
   add: (req, res) => {
     res.render('productCreate', {title: 'Crear Producto Nuevo'});
   },
+  store: (req, res) =>{
+    idNuevo=0;
+
+		for (let s of products){
+			if (idNuevo<s.id){
+				idNuevo=s.id;
+			}
+		}
+
+		idNuevo++;
+
+		let nombreImagen = req.file.filename;
+
+		let productoNuevo =  {
+			id:   idNuevo,
+			name: req.body.productName ,
+			description: req.body.productDescription,
+			//category: req.body.category,
+			price: req.body.productPrice,
+      color: req.body.color,
+      talle: req.body.talle,
+      stock: req.body.productStock,
+			image: nombreImagen
+		};
+
+		products.push(productoNuevo);
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+
+		res.redirect('/');
+
+		
+	},
   detail: (req, res) => {
     let productoSeleccionado = null;
     for (i=0;i<products.length;i++) {
@@ -23,9 +56,6 @@ const productController = {
 	 		}
 	 	}
 	 	res.render('productDetail', {title: 'Detalle de producto', productDetail: productoSeleccionado});
-  },
-  store: (req, res) =>{
-    res.send('Llegue al controlador de store via PUT')
   },
   edit: (req, res) => {
       let id = req.params.id;
