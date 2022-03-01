@@ -93,21 +93,21 @@ const productController = {
 	},
   delete: (req, res) => {
     let id = req.params.id;
-		let ProductoEncontrado=null;
+		let productoEncontrado = null;
 
-		let Nproducts = products.filter(function(e){
+		let nProducts = products.filter(function(e){
 			return id!=e.id;
 		})
 
 		for (let producto of products){
 			if (producto.id == id){
-			    ProductoEncontrado=producto;
+			    productoEncontrado = producto;
 			}
 		}
 
-		fs.unlinkSync(path.join(__dirname, '../../public/images/products/', ProductoEncontrado.image));
+		fs.unlinkSync(path.join(__dirname, '../../public/images/products/', productoEncontrado.image));
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(Nproducts,null,' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(nProducts,null,' '));
 
 		res.redirect('/');
 	}

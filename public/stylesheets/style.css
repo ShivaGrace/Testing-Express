@@ -971,10 +971,10 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fbfbff;
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 .mainTitle{
-  border: solid red 1px;
   text-align: center;
   display: block;
   position: absolute;
@@ -985,11 +985,8 @@ a{
 }  
 .shoppingBagManagement{ 
   width: 100%;
-  background-color: white;
-  border: 1px solid #d65780;
   
 }
-
 .contenido{
   width: 100%;
   display: flex;
@@ -1046,7 +1043,7 @@ input[type="text"] {
   width: 100%;
   height: 35vh;
   border-top: 1px solid #d65780;
-  border-bottom: 1px solid #d65780;
+  
   
 }
 .detalles{
@@ -1078,7 +1075,7 @@ input[type="text"] {
   position: relative;
   padding: 15px;
   border-top: 1px solid #d65780;
-  border-bottom: 1px solid #d65780;
+  
   
 }
 
@@ -1104,17 +1101,20 @@ input[type="text"] {
 }
 #cuponinput{
   width: 80%;
+  
 }
 #cargarcupon{
   width: 25px;
   height: 40px;
-  background-color: white;
+  background-color: #fbfbff;
   border: none;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
  
 }
 #cargarcupon .fa-cut{
   color: #d65780 ;
   text-align: center;
+  
 
 }
 .shippingMethod{
@@ -1295,6 +1295,10 @@ footer{
   .searchbox input {
       width: auto;
   }
+  .contenido .productPix{
+    max-width: fit-content;
+  }
+ 
 }
 
 
